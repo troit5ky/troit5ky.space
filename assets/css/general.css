@@ -100,7 +100,6 @@ body {
 #github:hover { background: rgba(145, 145, 145, .6); }
 #mast:hover { background: rgba(109, 109, 197, 0.6); }
 #telegram:hover { background: rgba(58, 118, 145, .6); }
-#vk:hover { background: rgba(58, 100, 145, .6); }
 #lastfm:hover { background: rgba(145, 58, 60, .6); }
 
 .parallax > use {
