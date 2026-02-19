@@ -4,7 +4,7 @@
     --bg-force: rgba(196, 196, 196, .6)
 }
 
-a {text-decoration: none;}
+a {text-decoration: none; color: darkgray;}
 
 body {
     margin: 0;
