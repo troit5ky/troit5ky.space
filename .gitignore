@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+
+# Generated CSS (Adjust path to your specific output directory)
+/dist/
+/build/
+/public/styles.css
+
+# Environment variables (if any)
+.env
+.env.local
+
+# Tooling/Editor
+.DS_Store
+.vscode/
+.idea/
+
+# Files to ignore
+tailwind.config.js
