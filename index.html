@@ -291,7 +291,7 @@
                         const seconds = Math.floor(timeAgo / 1000);
                         const minutes = Math.floor(seconds / 60);
 
-                        rpcContent += `<p id=${activity.id} class="text-gray-400 text-xs">${minutes > 0 ? `${minutes}m ago` : `${seconds}s ago`}</p>`;
+                        rpcContent += `<p id=${activity.id} class="text-gray-400 text-xs">${minutes > 0 ? `${minutes}m` : `${seconds}s ago`}</p>`;
 
                         if (activity.details) {
                             rpcContent += `<p class="text-gray-400">${activity.details}</p>`;
