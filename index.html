@@ -14,7 +14,7 @@
 
 <body class="m-0 overflow-x-hidden bg-gray-950 p-6 flex flex-wrap gap-4 text-gray-200">
 
-    <div class="flex flex-col gap-4">
+    <div class="flex flex-3 flex-col gap-4">
         <div class="rounded-lg shadow-lg bg-gray-900">
             <div class="bg-gray-800 rounded-t-lg p-2">
                 <h1 class="text-2xl text-center text-gray-300">Bio</h1>
@@ -106,12 +106,12 @@
         </div>
     </div>
 
-    <div class="flex-1 max-h-screen overflow-scroll overflow-y-auto overflow-x-hidden rounded-lg shadow-lg bg-gray-900">
+    <div class="flex-1 h-screen overflow-scroll overflow-y-auto overflow-x-hidden rounded-lg shadow-lg bg-gray-900">
         <div class="bg-gray-800 rounded-t-lg p-2">
             <h1 class="text-2xl text-center text-gray-300">Fediverse</h1>
         </div>
 
-        <div id="notes" class="p-4 h-auto flex flex-col gap-4">
+        <div id="notes" class="p-4 flex flex-col gap-4">
             <p class="text-gray-600">loading notes...</p>
         </div>
 
@@ -321,7 +321,7 @@
                                 const timeAgo = new Date().getTime() - new Date(activity.created_at).getTime()
                                 const seconds = Math.floor(timeAgo / 1000)
                                 const minutes = Math.floor(seconds / 60)
-                                timeElement.textContent = minutes > 0 ? `${minutes}m ago` : `${seconds}s ago`
+                                timeElement.textContent = minutes > 0 ? `${minutes}m` : `${seconds}s`
                             }
                         })
                     }, 1000)
