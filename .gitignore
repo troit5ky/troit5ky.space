@@ -17,3 +17,9 @@ node_modules/
 
 # Files to ignore
 tailwind.config.js
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+!.env.example
