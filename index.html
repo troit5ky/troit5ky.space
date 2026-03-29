@@ -289,8 +289,19 @@
                         const timeAgo = new Date().getTime() - new Date(activity.created_at).getTime();
                         const seconds = Math.floor(timeAgo / 1000);
                         const minutes = Math.floor(seconds / 60);
+                        const hours = Math.floor(minutes / 60);
+
+                        let time;
+
+                        if (hours > 0) {
+                            time = `${hours}h`;
+                        } else if (minutes > 0) {
+                            time = `${minutes}m`;
+                        } else {
+                            time = `${seconds}s`;
+                        }
                         
-                        rpcContent += `<div class="flex gap-2"><p class="text-gray-200 font-bold text-xl">${playing} ${activity.name}</p> <p id=${activity.id} class="flex items-center text-gray-400 text-sm">${minutes > 0 ? `${minutes}m` : `${seconds}s`}</p></div>`;
+                        rpcContent += `<div class="flex gap-2"><p class="text-gray-200 font-bold text-xl">${playing} ${activity.name}</p> <p id=${activity.id} class="flex items-center text-gray-400 text-sm">${time}</p></div>`;
 
                         if (activity.details) {
                             rpcContent += `<p class="text-gray-400">${activity.details}</p>`;
@@ -318,10 +329,23 @@
                         userData.activities.forEach(activity => {
                             const timeElement = document.getElementById(activity.id)
                             if (timeElement) {
-                                const timeAgo = new Date().getTime() - new Date(activity.created_at).getTime()
-                                const seconds = Math.floor(timeAgo / 1000)
-                                const minutes = Math.floor(seconds / 60)
-                                timeElement.textContent = minutes > 0 ? `${minutes}m` : `${seconds}s`
+                                const timestamp = activity.timestamps ? activity.timestamps.start : activity.created_at
+                                const timeAgo = new Date().getTime() - new Date(timestamp).getTime();
+                                const seconds = Math.floor(timeAgo / 1000);
+                                const minutes = Math.floor(seconds / 60);
+                                const hours = Math.floor(minutes / 60);
+
+                                let time;
+
+                                if (hours > 0) {
+                                    time = `${hours}h`;
+                                } else if (minutes > 0) {
+                                    time = `${minutes}m`;
+                                } else {
+                                    time = `${seconds}s`;
+                                }
+
+                                timeElement.textContent = time
                             }
                         })
                     }, 1000)
