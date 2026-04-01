@@ -12,16 +12,16 @@
     <title>troit5ky</title>
 </head>
 
-<body class="m-0 overflow-x-hidden bg-gray-950 p-6 flex flex-wrap gap-4 text-gray-200">
+<body class="m-0 overflow-x-hidden bg-gray-900 p-6 flex flex-wrap gap-4 text-gray-200">
 
     <div class="flex flex-3 flex-col gap-4">
-        <div class="rounded-lg shadow-lg bg-gray-900">
-            <div class="bg-gray-800 rounded-t-lg p-2">
+        <div class="rounded-lg shadow-lg bg-gray-800">
+            <div class="bg-gray-700 rounded-t-lg p-2">
                 <h1 class="text-2xl text-center text-gray-300">Bio</h1>
             </div>
 
             <div class="p-4 flex max-md:flex-col items-center gap-4">
-                <img class="rounded-full border-2 border-gray-300 h-24 w-24"
+                <img class="rounded-full border-2 border-gray-400 h-24 w-24"
                     src="https://www.gravatar.com/avatar/e0da031eefa8aa3d8b8df6eaee855b45.jpg?s=256" alt="avatar">
                 <div class="">
                     <h2 id="nickname" class="text-2xl max-md:text-center font-bold">тройка</h2>
@@ -31,8 +31,8 @@
         </div>
 
         <!-- RPC -->
-        <div class="rounded-lg shadow-lg bg-gray-900">
-            <div class="bg-gray-800 rounded-t-lg p-2">
+        <div class="rounded-lg shadow-lg bg-gray-800">
+            <div class="bg-gray-700 rounded-t-lg p-2">
                 <h1 class="text-2xl text-center text-gray-300">Activity</h1>
             </div>
 
@@ -43,8 +43,8 @@
             </div>
         </div>
 
-        <div class="rounded-lg shadow-lg bg-gray-900">
-            <div class="bg-gray-800 rounded-t-lg p-2">
+        <div class="rounded-lg shadow-lg bg-gray-800">
+            <div class="bg-gray-700 rounded-t-lg p-2">
                 <h1 class="text-2xl text-center text-gray-300">Fastfetch</h1>
             </div>
 
@@ -81,33 +81,33 @@
             </div>
         </div>
 
-        <div class="rounded-lg shadow-lg bg-gray-900">
-            <div class="bg-gray-800 rounded-t-lg p-2">
+        <div class="rounded-lg shadow-lg bg-gray-800">
+            <div class="bg-gray-700 rounded-t-lg p-2">
                 <h1 class="text-2xl text-center text-gray-300">Links</h1>
             </div>
 
             <div class="p-4 flex gap-4 flex-wrap">
-                <a class="flex-grow transition p-4 flex justify-center items-center gap-4 text-base bg-gray-800 hover:bg-gray-600 rounded"
+                <a class="flex-grow transition p-4 flex justify-center items-center gap-4 text-base bg-gray-700 hover:bg-gray-600 rounded"
                     href="https://r4v3.party"><img class="w-6" src="https://r4v3.party/assets/img/logo.svg"> r4v3.party
                     - my projects</a>
-                <a class="flex-grow transition p-4 flex justify-center items-center gap-4 text-base bg-gray-800 hover:bg-gray-600 rounded"
+                <a class="flex-grow transition p-4 flex justify-center items-center gap-4 text-base bg-gray-700 hover:bg-gray-600 rounded"
                     href="https://github.com/troit5ky"><img class="w-6" src="assets/img/github.png"> GitHub</a>
-                <a class="flex-grow transition p-4 flex justify-center items-center gap-4 text-base bg-gray-800 hover:bg-gray-600 rounded"
+                <a class="flex-grow transition p-4 flex justify-center items-center gap-4 text-base bg-gray-700 hover:bg-gray-600 rounded"
                     href="https://t.me/troit5ky"><img class="w-6" src="assets/img/tg.svg"> Telegram</a>
-                <a class="flex-grow transition p-4 flex justify-center items-center gap-4 text-base bg-gray-800 hover:bg-gray-600 rounded"
+                <a class="flex-grow transition p-4 flex justify-center items-center gap-4 text-base bg-gray-700 hover:bg-gray-600 rounded"
                     href="https://codestats.net/users/troit5ky"><img class="w-6" src="assets/img/codestat.svg">
                     Code::Stats</a>
-                <a class="flex-grow transition p-4 flex justify-center items-center gap-4 text-base bg-gray-800 hover:bg-gray-600 rounded"
+                <a class="flex-grow transition p-4 flex justify-center items-center gap-4 text-base bg-gray-700 hover:bg-gray-600 rounded"
                     href="https://www.last.fm/user/testeron211"><img class="w-6" src="assets/img/lastfm.svg">
                     Last.fm</a>
-                <a class="flex-grow transition p-4 flex justify-center items-center gap-4 text-base bg-gray-800 hover:bg-gray-600 rounded"
+                <a class="flex-grow transition p-4 flex justify-center items-center gap-4 text-base bg-gray-700 hover:bg-gray-600 rounded"
                     href="https://boosty.to/tr5ky"><img class="w-6" src="assets/img/boosty.svg"> Donate</a>
             </div>
         </div>
     </div>
 
-    <div class="flex-1 h-screen overflow-scroll overflow-y-auto overflow-x-hidden rounded-lg shadow-lg bg-gray-900">
-        <div class="bg-gray-800 rounded-t-lg p-2">
+    <div class="flex-1 h-screen overflow-scroll overflow-y-auto overflow-x-hidden rounded-lg shadow-lg bg-gray-800">
+        <div class="bg-gray-700 rounded-t-lg p-2">
             <h1 class="text-2xl text-center text-gray-300">Fediverse</h1>
         </div>
 
@@ -155,7 +155,7 @@
             notes.forEach(data => {
 
                 const noteElement = document.createElement('div');
-                noteElement.className = 'note-item rounded-lg bg-gray-800 p-3 flex flex-col gap-3';
+                noteElement.className = 'note-item rounded-lg bg-gray-700 p-3 flex flex-col gap-3';
 
                 // Текст заметки
                 const textPart = document.createElement('p');
@@ -195,7 +195,7 @@
 
                 if (data.renote) {
                     const renote = document.createElement('p')
-                    renote.className = 'bg-gray-700 p-2 rounded-md border-l-2 border-gray-300 text-gray-400'
+                    renote.className = 'bg-gray-600 p-2 rounded-md border-l-2 border-gray-400 text-gray-400'
                     renote.textContent = data.renote.text
                     noteElement.appendChild(renote)
                 }
