@@ -2,16 +2,4 @@
 
 :root {
     --default-font-family: "Google Sans", sans-serif;
-
-  --color-gray-50: oklch(0.976 0.033 180.41);
-  --color-gray-100: oklch(0.955 0.064 178.02);
-  --color-gray-200: oklch(0.921 0.119 175.46);
-  --color-gray-300: oklch(0.9 0.155 172.36);
-  --color-gray-400: oklch(0.889 0.178 168.52);
-  --color-gray-500: oklch(0.764 0.156 167.4);
-  --color-gray-600: oklch(0.65 0.132 167.72);
-  --color-gray-700: oklch(0.533 0.108 167.71);
-  --color-gray-800: oklch(0.39 0.078 169.36);
-  --color-gray-900: oklch(0.25 0.048 172.08);
-  --color-gray-950: oklch(0.171 0.032 175.91);
 }

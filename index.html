@@ -12,19 +12,19 @@
     <title>troit5ky</title>
 </head>
 
-<body class="m-0 overflow-x-hidden bg-gray-900 p-6 flex flex-wrap gap-4 text-gray-200">
+<body class="m-0 overflow-x-hidden bg-gray-900 p-6 flex flex-col lg:flex-row gap-4 text-gray-200">
 
-    <div class="flex flex-3 flex-col gap-4">
+    <div class="flex flex-1 flex-col gap-4 w-full lg:w-2/3">
         <div class="rounded-lg shadow-lg bg-gray-800">
             <div class="bg-gray-700 rounded-t-lg p-2">
-                <h1 class="text-2xl text-center text-gray-300">Bio</h1>
+                <h1 class="text-2xl text-center text-gray-200">Bio</h1>
             </div>
 
-            <div class="p-4 flex max-md:flex-col items-center gap-4">
+            <div class="p-4 flex lg:flex-col items-center gap-4 lg:gap-2">
                 <img class="rounded-full border-2 border-gray-400 h-24 w-24"
                     src="https://www.gravatar.com/avatar/e0da031eefa8aa3d8b8df6eaee855b45.jpg?s=256" alt="avatar">
                 <div class="">
-                    <h2 id="nickname" class="text-2xl max-md:text-center font-bold">тройка</h2>
+                    <h2 id="nickname" class="text-2xl text-gray-200 lg:text-center font-bold">тройка</h2>
                     <p class="text-gray-400">Male 22. Fullstack Developer / SysAdmin | Docker & RouterOS enjoyer</p>
                 </div>
             </div>
@@ -33,7 +33,7 @@
         <!-- RPC -->
         <div class="rounded-lg shadow-lg bg-gray-800">
             <div class="bg-gray-700 rounded-t-lg p-2">
-                <h1 class="text-2xl text-center text-gray-300">Activity</h1>
+                <h1 class="text-2xl text-center text-gray-200">Activity</h1>
             </div>
 
             <div class="p-4 gap-4">
@@ -45,12 +45,12 @@
 
         <div class="rounded-lg shadow-lg bg-gray-800">
             <div class="bg-gray-700 rounded-t-lg p-2">
-                <h1 class="text-2xl text-center text-gray-300">Fastfetch</h1>
+                <h1 class="text-2xl text-center text-gray-200">Fastfetch</h1>
             </div>
 
             <div class="p-4 gap-4">
                 <div class="flex flex-col gap-4">
-                    <pre class="p-4 text-gray-400 bg-zinc-800 text-xs max-md:text-[.45rem] font-mono text-balance">❯ fastfetch
+                    <pre class="p-4 bg-zinc-800 text-gray-400 text-[0.6rem] sm:text-xs md:text-sm font-mono overflow-x-auto whitespace-pre">❯ fastfetch
            .-------------------------:                    troit5ky@troit5ky
           .+=========================.                    -----------------
          :++===++==================-       :++-           OS: CachyOS x86_64
@@ -83,7 +83,7 @@
 
         <div class="rounded-lg shadow-lg bg-gray-800">
             <div class="bg-gray-700 rounded-t-lg p-2">
-                <h1 class="text-2xl text-center text-gray-300">Links</h1>
+                <h1 class="text-2xl text-center text-gray-200">Links</h1>
             </div>
 
             <div class="p-4 flex gap-4 flex-wrap">
@@ -106,9 +106,9 @@
         </div>
     </div>
 
-    <div class="flex-1 h-screen overflow-scroll overflow-y-auto overflow-x-hidden rounded-lg shadow-lg bg-gray-800">
+    <div class="flex-1 flex-wrap lg:sticky lg:max-h-[calc(100vh-3rem)] overflow-scroll overflow-y-auto overflow-x-hidden rounded-lg shadow-lg bg-gray-800">
         <div class="bg-gray-700 rounded-t-lg p-2">
-            <h1 class="text-2xl text-center text-gray-300">Fediverse</h1>
+            <h1 class="text-2xl text-center text-gray-200">Fediverse</h1>
         </div>
 
         <div id="notes" class="p-4 flex flex-col gap-4">
@@ -205,10 +205,9 @@
                 footer.className = 'flex justify-between items-center mt-auto';
 
                 const infoPart = document.createElement('span');
-                infoPart.className = 'text-[10px] uppercase font-bold text-gray-500';
 
                 const timePart = document.createElement('span');
-                timePart.className = 'text-xs text-gray-500';
+                timePart.className = 'text-xs text-gray-400';
                 const date = new Date(data.createdAt);
                 timePart.textContent = date.toLocaleString('ru-RU', {
                     day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit'
