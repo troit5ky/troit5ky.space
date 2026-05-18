@@ -13,8 +13,7 @@
 </head>
 
 <body class="m-0 overflow-x-hidden bg-gray-900 p-6 flex flex-col lg:flex-row gap-4 text-gray-200">
-
-    <div class="flex flex-1 flex-col gap-4 w-full lg:w-2/3">
+    <div class="flex flex-1 flex-col gap-4 w-full max-w-[960px] mx-auto">
         <div class="rounded-lg shadow-lg bg-gray-800">
             <div class="bg-gray-700 rounded-t-lg p-2">
                 <h1 class="text-2xl text-center text-gray-200">Bio</h1>
@@ -105,131 +104,9 @@
             </div>
         </div>
     </div>
-
-    <div class="flex-1 flex-wrap lg:sticky lg:max-h-[calc(100vh-3rem)] overflow-scroll overflow-y-auto overflow-x-hidden rounded-lg shadow-lg bg-gray-800">
-        <div class="bg-gray-700 rounded-t-lg p-2">
-            <h1 class="text-2xl text-center text-gray-200">Fediverse</h1>
-        </div>
-
-        <div id="notes" class="p-4 flex flex-col gap-4">
-            <p class="text-gray-600">loading notes...</p>
-        </div>
-
-    </div>
-
 </body>
 
 <script>
-    async function fetchNotes() {
-        const url = 'https://social.r4v3.party/api/users/notes';
-        const notesContainer = document.getElementById('notes');
-
-        const requestData = {
-            userId: "a26i1ewme8ox0001",
-            withRenotes: false,
-            withReplies: false,
-            withChannelNotes: false,
-            withFiles: false,
-            limit: 10,
-            allowPartial: true
-        };
-
-        try {
-            const response = await fetch(url, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(requestData)
-            });
-
-            if (!response.ok) {
-                throw new Error(`Ошибка сети: ${response.status}`);
-            }
-
-            const notes = await response.json();
-
-            // Очистка контейнера перед вставкой
-            notesContainer.innerHTML = '';
-
-            notes.forEach(data => {
-
-                const noteElement = document.createElement('div');
-                noteElement.className = 'note-item rounded-lg bg-gray-700 p-3 flex flex-col gap-3';
-
-                // Текст заметки
-                const textPart = document.createElement('p');
-                textPart.textContent = data.text || '';
-                noteElement.appendChild(textPart);
-
-                // Обработка вложений (картинок)
-                if (data.files && data.files.length > 0) {
-                    const filesGrid = document.createElement('div');
-                    filesGrid.className = 'grid gap-2 grid-cols-1';
-
-                    data.files.forEach(file => {
-                        if (file.isSensitive) {
-                            filesGrid.textContent = '🔞 NSFW'
-                            return
-                        }
-
-                        if (file.type.startsWith('image')) {
-                            const notefile = document.createElement('img');
-                            notefile.src = file.url;
-                            notefile.className = 'rounded-md h-auto object-cover cursor-pointer';
-                            notefile.onclick = () => window.open(file.url, '_blank'); // Открыть оригинал по клику
-                            filesGrid.appendChild(notefile);
-                        }
-                        if (file.type.startsWith('video')) {
-                            const notefile = document.createElement('video');
-                            notefile.controls = true
-                            const source = document.createElement('source')
-                            source.src = file.url
-                            notefile.appendChild(source)
-                            notefile.className = 'rounded-md h-auto object-cover cursor-pointer';
-                            filesGrid.appendChild(notefile);
-                        }
-                    });
-                    noteElement.appendChild(filesGrid);
-                }
-
-                if (data.renote) {
-                    const renote = document.createElement('p')
-                    renote.className = 'bg-gray-600 p-2 rounded-md border-l-2 border-gray-400 text-gray-400'
-                    renote.textContent = data.renote.text
-                    noteElement.appendChild(renote)
-                }
-
-                // Футер: Инфо о реноуте и дата
-                const footer = document.createElement('div');
-                footer.className = 'flex justify-between items-center mt-auto';
-
-                const infoPart = document.createElement('span');
-
-                const timePart = document.createElement('span');
-                timePart.className = 'text-xs text-gray-400';
-                const date = new Date(data.createdAt);
-                timePart.textContent = date.toLocaleString('ru-RU', {
-                    day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit'
-                });
-
-                footer.appendChild(infoPart);
-                footer.appendChild(timePart);
-                noteElement.appendChild(footer);
-
-                notesContainer.appendChild(noteElement);
-            });
-
-
-        } catch (error) {
-            console.error('Ошибка при получении заметок:', error);
-            notesContainer.textContent = 'Не удалось загрузить заметки.';
-        }
-    }
-
-    // Вызов функции
-    fetchNotes();
-
     // Fetch RPC data from Lanyard API
     async function fetchRpcData() {
         const rpcContainer = document.getElementById('rpc-data');
