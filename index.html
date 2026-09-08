@@ -9,7 +9,7 @@
     <meta name="keywords" content="troit5ky, tr5ky, @tr5ky, @troit5ky, links, page, landing, bio">
     <meta name="troit5ky" content="Dmitry Troitsky">
     <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
-    <title>troit5ky</title>
+    <title>troit5ky | тройка</title>
 </head>
 
 <body class="m-0 overflow-x-hidden bg-gray-900 p-6 flex flex-col lg:flex-row gap-4 text-gray-200">
@@ -20,10 +20,16 @@
             </div>
 
             <div class="p-4 flex lg:flex-col items-center gap-4 lg:gap-2">
-                <img class="rounded-full border-2 border-gray-400 h-24 w-24"
-                    src="https://www.gravatar.com/avatar/e0da031eefa8aa3d8b8df6eaee855b45.jpg?s=256" alt="avatar">
+                <div class="relative">
+                    <img class="min-w-24 rounded-full border-2 border-gray-400"
+                        src="https://www.gravatar.com/avatar/e0da031eefa8aa3d8b8df6eaee855b45.jpg?s=96" alt="avatar"/>
+                    <span id="online-status" class="absolute bottom-0 right-0 h-8 w-8 rounded-full bg-gray-500 border-4 border-gray-800" title="online"></span>
+                    <span id="online-status-ping" class="absolute bottom-0 right-0 h-8 w-8 rounded-full bg-gray-500 animate-ping opacity-50" title="online"></span>
+                </div>
                 <div class="">
-                    <h2 id="nickname" class="text-2xl text-gray-200 lg:text-center font-bold">тройка</h2>
+                    <div class="flex gap-2 items-end lg:justify-center">
+                        <h2 id="nickname" class="text-2xl text-gray-200 font-bold">тройка</h2> <p class="text-lg text-gray-400">aka troit5ky</p>
+                    </div>
                     <p class="text-gray-400">Male 22. Fullstack Developer / SysAdmin | Docker & RouterOS enjoyer</p>
                 </div>
             </div>
@@ -49,33 +55,21 @@
 
             <div class="p-4 gap-4">
                 <div class="flex flex-col gap-4">
-                    <pre class="p-4 bg-zinc-800 text-gray-400 text-[0.6rem] sm:text-xs md:text-sm font-mono overflow-x-auto whitespace-pre">❯ fastfetch
-           .-------------------------:                    troit5ky@troit5ky
-          .+=========================.                    -----------------
-         :++===++==================-       :++-           OS: CachyOS x86_64
-        :*++====+++++=============-        .==:           Host: MS-7A38 (8.0)
-       -*+++=====+***++==========:                        Kernel: Linux 6.19.10-1-cachyos
-      =*++++========------------:                         Uptime: 10 hours, 59 mins
-     =*+++++=====-                     ...                Packages: 1548 (pacman), 31 (flatpak-system), 1 (flatpak-user)
-   .+*+++++=-===:                    .=+++=:              Shell: fish 4.5.0
-  :++++=====-==:                     -*****+              Display (Mi Monitor): 1920x1080 in 24", 180 Hz [External, HDR]
- :++========-=.                      .=+**+.              DE: KDE Plasma 6.6.3
-.+==========-.                          .                 WM: KWin (Wayland)
- :+++++++====-                                .--==-.     WM Theme: Breeze
-  :++==========.                             :+++++++:    Theme: Breeze (Dark) [Qt], Breeze-Dark [GTK2], Breeze [GTK3]
-   .-===========.                            =*****+*+    Icons: Papirus-Dark [Qt], Papirus-Dark [GTK2/3/4]
-    .-===========:                           .+*****+:    Font: Roboto (10pt) [Qt], Roboto (10pt) [GTK2/3/4]
-      -=======++++:::::::::::::::::::::::::-:  .---:      Cursor: Vimix (24px)
-       :======++++====+++******************=.             Terminal: alacritty 0.16.1
-        :=====+++==========++++++++++++++*-               Terminal Font: monospace (12pt, Regular)
-         .====++==============++++++++++*-                CPU: AMD Ryzen 7 5700X (16) @ 4.67 GHz
-          .===+==================+++++++:                 GPU: AMD Radeon RX 9060 XT [Discrete]
-           .-=======================+++:                  Memory: 9.32 GiB / 31.26 GiB (30%)
-             ..........................                   Swap: 4.05 MiB / 7.82 GiB (0%)
-                                                          Disk (/): 388.64 GiB / 472.61 GiB (82%) - xfs
-                                                          Disk (/run/media/troit5ky/1a3e05b5-1958-2386-2025-59805dba4658): 75.08 GiB / 456.26 GiB (16%) - btrfs
-                                                          Local IP (tr5ky): 10.10.10.2/32
-                                                          Locale: en_US.UTF-8</pre>
+                    <pre class="p-4 bg-zinc-800 text-gray-400 text-[0.6rem] sm:text-xs md:text-sm font-mono overflow-x-auto whitespace-pre">❯ fastfetch 
+⣇⣿⠘⣿⣿⣿⡿⡿⣟⣟⢟⢟⢝⠵⡝⣿⡿⢂⣼⣿⣷⣌⠩⡫⡻⣝⠹⢿⣿⣷   troit5ky@troit5ky
+⡆⣿⣆⠱⣝⡵⣝⢅⠙⣿⢕⢕⢕⢕⢝⣥⢒⠅⣿⣿⣿⡿⣳⣌⠪⡪⣡⢑⢝⣇   
+⡆⣿⣿⣦⠹⣳⣳⣕⢅⠈⢗⢕⢕⢕⢕⢕⢈⢆⠟⠋⠉⠁⠉⠉⠁⠈⠼⢐⢕⢽   ▸ CachyOS x86_64
+⡗⢰⣶⣶⣦⣝⢝⢕⢕⠅⡆⢕⢕⢕⢕⢕⣴⠏⣠⡶⠛⡉⡉⡛⢶⣦⡀⠐⣕⢕   ▸ Linux 7.2.2-1-cachyos-bore-lto
+⡝⡄⢻⢟⣿⣿⣷⣕⣕⣅⣿⣔⣕⣵⣵⣿⣿⢠⣿⢠⣮⡈⣌⠨⠅⠹⣷⡀⢱⢕   ▸ KWin (Wayland)
+⡝⡵⠟⠈⢀⣀⣀⡀⠉⢿⣿⣿⣿⣿⣿⣿⣿⣼⣿⢈⡋⠴⢿⡟⣡⡇⣿⡇⡀⢕   ▸ MS-7A38 (8.0)
+⡝⠁⣠⣾⠟⡉⡉⡉⠻⣦⣻⣿⣿⣿⣿⣿⣿⣿⣿⣧⠸⣿⣦⣥⣿⡇⡿⣰⢗⢄   ▸ AMD Ryzen 7 5700X (16) @ 4.67 GHz
+⠁⢰⣿⡏⣴⣌⠈⣌⠡⠈⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣬⣉⣉⣁⣄⢖⢕⢕⢕   ▸ AMD Radeon RX 9060 XT [Discrete]
+⡀⢻⣿⡇⢙⠁⠴⢿⡟⣡⡆⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣵⣵⣿   ▸ 13.11 GiB / 31.26 GiB (42%)
+⡻⣄⣻⣿⣌⠘⢿⣷⣥⣿⠇⣿⣿⣿⣿⣿⣿⠛⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿   ▸ 3.61 GiB / 7.82 GiB (46%)
+⣷⢄⠻⣿⣟⠿⠦⠍⠉⣡⣾⣿⣿⣿⣿⣿⣿⢸⣿⣦⠙⣿⣿⣿⣿⣿⣿⣿⣿⠟   ▸ 3 days, 9 hours, 55 mins
+⡕⡑⣑⣈⣻⢗⢟⢞⢝⣻⣿⣿⣿⣿⣿⣿⣿⠸⣿⠿⠃⣿⣿⣿⣿⣿⣿⡿⠁⣠   
+⡝⡵⡈⢟⢕⢕⢕⢕⣵⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣶⣿⣿⣿⣿⣿⠿⠋⣀⣈⠙
+⡝⡵⡕⡀⠑⠳⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠛⢉⡠⡲⡫⡪⡪⡣</pre>
                 </div>
             </div>
         </div>
@@ -124,27 +118,29 @@
 
             if (userData.discord_user) {
 
-                const nickname = document.getElementById('nickname')
-                const savedNick = nickname.textContent
+                const online_status = document.getElementById('online-status')
+                const online_status_ping = document.getElementById('online-status-ping')
                 let status
 
                 switch (userData.discord_status) {
                     case 'online':
-                        status = '🟢'
+                        online_status.style.backgroundColor = "oklch(72.3% 0.219 149.579)"
+                        online_status_ping.style.backgroundColor = "oklch(72.3% 0.219 149.579)"
                         break;
                     case 'idle':
-                        status = '🌙'
+                        online_status.style.backgroundColor = "oklch(79.5% 0.184 86.047)"
+                        online_status_ping.style.backgroundColor = "oklch(79.5% 0.184 86.047)"
                         break;
                     case 'dnd':
-                        status = '🔴'
+                        online_status.style.backgroundColor = "oklch(63.7% 0.237 25.331)"
+                        online_status_ping.style.backgroundColor = "oklch(63.7% 0.237 25.331)"
                         break;
 
                     default:
-                        status = '⚪'
+                        online_status.style.backgroundColor = "oklch(55.1% 0.027 264.364)"
+                        online_status_ping.style.backgroundColor = "oklch(55.1% 0.027 264.364)"
                         break;
                 }
-
-                nickname.textContent = `${savedNick} ${status}`
 
                 if (userData.activities && userData.activities.length > 0) {
                     userData.activities.forEach(activity => {
@@ -184,31 +180,29 @@
                         activitybadge.dataset.activityId = activity.id
                     });
 
-                    // Запускаем таймер для обновления времени
-                    setInterval(() => {
-                        userData.activities.forEach(activity => {
-                            const timeElement = document.getElementById(activity.id)
-                            if (timeElement) {
-                                const timestamp = activity.timestamps ? activity.timestamps.start : activity.created_at
-                                const timeAgo = new Date().getTime() - new Date(timestamp).getTime();
-                                const seconds = Math.floor(timeAgo / 1000);
-                                const minutes = Math.floor(seconds / 60);
-                                const hours = Math.floor(minutes / 60);
+                    // Устанавливаем время активностей
+                    userData.activities.forEach(activity => {
+                        const timeElement = document.getElementById(activity.id)
+                        if (timeElement) {
+                            const timestamp = activity.timestamps ? activity.timestamps.start : activity.created_at
+                            const timeAgo = new Date().getTime() - new Date(timestamp).getTime();
+                            const seconds = Math.floor(timeAgo / 1000);
+                            const minutes = Math.floor(seconds / 60);
+                            const hours = Math.floor(minutes / 60);
 
-                                let time;
+                            let time;
 
-                                if (hours > 0) {
-                                    time = `${hours}h`;
-                                } else if (minutes > 0) {
-                                    time = `${minutes}m`;
-                                } else {
-                                    time = `${seconds}s`;
-                                }
-
-                                timeElement.textContent = time
+                            if (hours > 0) {
+                                time = `${hours}h`;
+                            } else if (minutes > 0) {
+                                time = `${minutes}m`;
+                            } else {
+                                time = `${seconds}s`;
                             }
-                        })
-                    }, 1000)
+
+                            timeElement.textContent = time
+                        }
+                    })
                 } else {
                     rpcContainer.innerHTML = `<p class="text-gray-400">No activities</p>`;
                 }
@@ -223,6 +217,7 @@
 
     // Fetch RPC data when page loads
     fetchRpcData();
+    setInterval(fetchRpcData, 8000)
 </script>
 
 </html>
